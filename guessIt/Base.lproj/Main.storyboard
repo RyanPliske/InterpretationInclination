@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +656,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="guessIt" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -679,11 +682,67 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="guessIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-HM-xmx" userLabel="Container View">
+                                <rect key="frame" x="-273" y="-185" width="1025" height="640"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1024" id="E9F-gy-Pe8"/>
+                                    <constraint firstAttribute="height" constant="640" id="WZS-b3-evb"/>
+                                </constraints>
+                            </customView>
+                            <imageView horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ewc-Ac-kA8">
+                                <rect key="frame" x="-273" y="-185" width="492" height="640"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="f6T-Mx-90R"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="f3a-B3-ltX">
+                                <rect key="frame" x="260" y="-185" width="492" height="640"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="lTX-M9-wIJ"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DLX-n2-orn">
+                                <rect key="frame" x="205" y="23" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZYl-dH-b78">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="nextButtonPressed:" target="XfG-lQ-9wD" id="iWD-Ml-rSj"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="98B-2O-3JJ">
+                                <rect key="frame" x="144" y="79" width="193" height="36"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Random Word" drawsBackground="YES" id="kkv-Iy-Q7i">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Fhq-HM-xmx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="0aK-Rx-8eg"/>
+                            <constraint firstItem="ewc-Ac-kA8" firstAttribute="bottom" secondItem="Fhq-HM-xmx" secondAttribute="bottom" id="0tz-YJ-tqE"/>
+                            <constraint firstItem="ewc-Ac-kA8" firstAttribute="width" secondItem="Fhq-HM-xmx" secondAttribute="width" multiplier="0.48" id="2Ws-wm-PXb"/>
+                            <constraint firstItem="DLX-n2-orn" firstAttribute="top" secondItem="98B-2O-3JJ" secondAttribute="bottom" constant="28" id="4PO-5F-t3A"/>
+                            <constraint firstItem="98B-2O-3JJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="6Bb-WG-cfm"/>
+                            <constraint firstItem="Fhq-HM-xmx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="DsZ-Yd-MlZ"/>
+                            <constraint firstItem="f3a-B3-ltX" firstAttribute="trailing" secondItem="Fhq-HM-xmx" secondAttribute="trailing" id="IXN-Hf-H1M"/>
+                            <constraint firstItem="ewc-Ac-kA8" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" id="JeS-Dc-UMt"/>
+                            <constraint firstItem="f3a-B3-ltX" firstAttribute="width" secondItem="Fhq-HM-xmx" secondAttribute="width" multiplier="0.48" id="Rum-cQ-agF"/>
+                            <constraint firstItem="f3a-B3-ltX" firstAttribute="bottom" secondItem="Fhq-HM-xmx" secondAttribute="bottom" id="YEb-7m-ZxC"/>
+                            <constraint firstItem="DLX-n2-orn" firstAttribute="centerX" secondItem="Fhq-HM-xmx" secondAttribute="centerX" id="ZbA-fB-s3V"/>
+                            <constraint firstItem="DLX-n2-orn" firstAttribute="bottom" secondItem="m2S-Jp-Qdl" secondAttribute="bottom" constant="-30" id="cWE-Et-2AB"/>
+                            <constraint firstItem="ewc-Ac-kA8" firstAttribute="leading" secondItem="Fhq-HM-xmx" secondAttribute="leading" id="grn-eQ-x6M"/>
+                            <constraint firstItem="f3a-B3-ltX" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" id="p6g-TK-Suo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="ewc-Ac-kA8" id="fmK-QE-qnd"/>
+                        <outlet property="randomWordField" destination="98B-2O-3JJ" id="gdi-K6-eEy"/>
+                        <outlet property="rightImageView" destination="f3a-B3-ltX" id="bva-xk-269"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
