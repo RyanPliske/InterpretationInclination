@@ -1,23 +1,65 @@
 import Cocoa
+import MultipeerConnectivity
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate {
     
-    @IBOutlet weak var leftImageView: NSImageView!
-    @IBOutlet weak var rightImageView: NSImageView!
-    @IBOutlet weak var randomWordField: NSTextField!
+    @IBOutlet private weak var leftImageView: NSImageView!
+    @IBOutlet private weak var rightImageView: NSImageView!
+    @IBOutlet private weak var randomWordField: NSTextField!
     
-    let wordBank = WordBank()
+    private let wordBank = WordBank()
+    private var peerIds = [MCPeerID]()
+    private var advertiser: MCNearbyServiceAdvertiser!
+    private var session: MCSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resetImages()
         resetWord()
+        let peerId = MCPeerID(displayName: "II-Host")
+        session = MCSession(peer: peerId)
+        session!.delegate = self
+        advertiser = MCNearbyServiceAdvertiser(peer: peerId, discoveryInfo: nil, serviceType: "II")
+        advertiser.delegate = self
+        advertiser.startAdvertisingPeer()
     }
 
     @IBAction func nextButtonPressed(_ sender: Any) {
         resetImages()
         resetWord()
+        let _ = try? session.send(wordBank.randomWords(), toPeers: peerIds, with: .reliable)
     }
+    
+    // MARK: - MCNearbyServiceAdvertiserDelegate
+    
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        peerIds.append(peerID)
+        invitationHandler(true, session)
+    }
+    
+    // MARK: - MCSessionDelegate
+    
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        
+    }
+    
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
+        
+    }
+    
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
+        
+    }
+    
+    // MARK: - Private Helpers
     
     private func resetWord() {
         randomWordField.stringValue = wordBank.randomWord()

@@ -72,6 +72,13 @@
 		F93BD53D1DCE6AD300ABBF28 /* 59.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F93BD5011DCE6AD300ABBF28 /* 59.jpg */; };
 		F93BD53E1DCE6AD300ABBF28 /* 60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F93BD5021DCE6AD300ABBF28 /* 60.jpg */; };
 		F93BD5401DCE756E00ABBF28 /* WordBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD53F1DCE756E00ABBF28 /* WordBank.swift */; };
+		F93BD5481DCE799D00ABBF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */; };
+		F93BD54A1DCE799D00ABBF28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD5491DCE799D00ABBF28 /* ViewController.swift */; };
+		F93BD54D1DCE799D00ABBF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93BD54B1DCE799D00ABBF28 /* Main.storyboard */; };
+		F93BD54F1DCE799D00ABBF28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */; };
+		F93BD5521DCE799D00ABBF28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93BD5501DCE799D00ABBF28 /* LaunchScreen.storyboard */; };
+		F9AB29481DCE829D0030DB3C /* WordsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB29471DCE829D0030DB3C /* WordsHandler.swift */; };
+		F9AB294A1DCE839A0030DB3C /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB29491DCE839A0030DB3C /* WordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,10 +149,26 @@
 		F93BD5011DCE6AD300ABBF28 /* 59.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 59.jpg; sourceTree = "<group>"; };
 		F93BD5021DCE6AD300ABBF28 /* 60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 60.jpg; sourceTree = "<group>"; };
 		F93BD53F1DCE756E00ABBF28 /* WordBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordBank.swift; sourceTree = "<group>"; };
+		F93BD5451DCE799D00ABBF28 /* iDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F93BD5491DCE799D00ABBF28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F93BD54C1DCE799D00ABBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F93BD5511DCE799D00ABBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F93BD5531DCE799D00ABBF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AB29471DCE829D0030DB3C /* WordsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsHandler.swift; sourceTree = "<group>"; };
+		F9AB29491DCE839A0030DB3C /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F93BD4B11DCE68A700ABBF28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93BD5421DCE799D00ABBF28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -159,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				F93BD4B61DCE68A700ABBF28 /* guessIt */,
+				F93BD5461DCE799D00ABBF28 /* iDealer */,
 				F93BD4B51DCE68A700ABBF28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F93BD4B41DCE68A700ABBF28 /* guessIt.app */,
+				F93BD5451DCE799D00ABBF28 /* iDealer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +277,21 @@
 			path = Art;
 			sourceTree = "<group>";
 		};
+		F93BD5461DCE799D00ABBF28 /* iDealer */ = {
+			isa = PBXGroup;
+			children = (
+				F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */,
+				F93BD5491DCE799D00ABBF28 /* ViewController.swift */,
+				F9AB29471DCE829D0030DB3C /* WordsHandler.swift */,
+				F93BD54B1DCE799D00ABBF28 /* Main.storyboard */,
+				F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */,
+				F93BD5501DCE799D00ABBF28 /* LaunchScreen.storyboard */,
+				F93BD5531DCE799D00ABBF28 /* Info.plist */,
+				F9AB29491DCE839A0030DB3C /* WordCell.swift */,
+			);
+			path = iDealer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +312,23 @@
 			productReference = F93BD4B41DCE68A700ABBF28 /* guessIt.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F93BD5441DCE799D00ABBF28 /* iDealer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93BD5541DCE799D00ABBF28 /* Build configuration list for PBXNativeTarget "iDealer" */;
+			buildPhases = (
+				F93BD5411DCE799D00ABBF28 /* Sources */,
+				F93BD5421DCE799D00ABBF28 /* Frameworks */,
+				F93BD5431DCE799D00ABBF28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDealer;
+			productName = iDealer;
+			productReference = F93BD5451DCE799D00ABBF28 /* iDealer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,6 +340,11 @@
 				ORGANIZATIONNAME = competidev;
 				TargetAttributes = {
 					F93BD4B31DCE68A700ABBF28 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WBQ5Y4ZSH4;
+						ProvisioningStyle = Automatic;
+					};
+					F93BD5441DCE799D00ABBF28 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = WBQ5Y4ZSH4;
 						ProvisioningStyle = Automatic;
@@ -303,6 +365,7 @@
 			projectRoot = "";
 			targets = (
 				F93BD4B31DCE68A700ABBF28 /* guessIt */,
+				F93BD5441DCE799D00ABBF28 /* iDealer */,
 			);
 		};
 /* End PBXProject section */
@@ -377,6 +440,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F93BD5431DCE799D00ABBF28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93BD5521DCE799D00ABBF28 /* LaunchScreen.storyboard in Resources */,
+				F93BD54F1DCE799D00ABBF28 /* Assets.xcassets in Resources */,
+				F93BD54D1DCE799D00ABBF28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -390,6 +463,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F93BD5411DCE799D00ABBF28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9AB29481DCE829D0030DB3C /* WordsHandler.swift in Sources */,
+				F9AB294A1DCE839A0030DB3C /* WordCell.swift in Sources */,
+				F93BD54A1DCE799D00ABBF28 /* ViewController.swift in Sources */,
+				F93BD5481DCE799D00ABBF28 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -399,6 +483,22 @@
 				F93BD4BE1DCE68A800ABBF28 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F93BD54B1DCE799D00ABBF28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93BD54C1DCE799D00ABBF28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F93BD5501DCE799D00ABBF28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93BD5511DCE799D00ABBF28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -522,6 +622,41 @@
 			};
 			name = Release;
 		};
+		F93BD5551DCE799D00ABBF28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WBQ5Y4ZSH4;
+				INFOPLIST_FILE = iDealer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = competidev.iDealer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F93BD5561DCE799D00ABBF28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WBQ5Y4ZSH4;
+				INFOPLIST_FILE = iDealer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = competidev.iDealer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,6 +676,16 @@
 				F93BD4C51DCE68A800ABBF28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93BD5541DCE799D00ABBF28 /* Build configuration list for PBXNativeTarget "iDealer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93BD5551DCE799D00ABBF28 /* Debug */,
+				F93BD5561DCE799D00ABBF28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
