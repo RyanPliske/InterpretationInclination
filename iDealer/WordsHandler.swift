@@ -9,7 +9,7 @@ class WordsHandler: NSObject, MCSessionDelegate {
     
     override init() {
         peerId = MCPeerID(displayName: UIDevice.current.name)
-        session = MCSession(peer: peerId)
+        session = MCSession(peer: peerId, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         super.init()
         session.delegate = self
     }

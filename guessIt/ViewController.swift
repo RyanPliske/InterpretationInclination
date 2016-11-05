@@ -17,7 +17,7 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
         resetImages()
         resetWord()
         let peerId = MCPeerID(displayName: "II-Host")
-        session = MCSession(peer: peerId)
+        session = MCSession(peer: peerId, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         session!.delegate = self
         advertiser = MCNearbyServiceAdvertiser(peer: peerId, discoveryInfo: nil, serviceType: "II")
         advertiser.delegate = self

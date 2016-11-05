@@ -6,6 +6,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var wordsTableView: UITableView!
     
     private let model = WordsHandler()
+    private var browser: MCNearbyServiceBrowser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,11 +16,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let browser = MCNearbyServiceBrowser(peer: model.peerId, serviceType: "II")
-        let browserVC = MCBrowserViewController(browser: browser, session: model.session)
-        browserVC.delegate = self
-        self.present(browserVC, animated: true) {
-            browser.startBrowsingForPeers()
+        if browser == nil {
+            browser = MCNearbyServiceBrowser(peer: model.peerId, serviceType: "II")
+            let browserVC = MCBrowserViewController(browser: browser!, session: model.session)
+            browserVC.delegate = self
+            self.present(browserVC, animated: true) {
+                self.browser!.startBrowsingForPeers()
+            }
         }
     }
     
@@ -37,11 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - MCBrowserViewControllerDelegate
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
