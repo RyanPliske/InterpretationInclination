@@ -1,9 +1,9 @@
 import UIKit
 import MultipeerConnectivity
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate, WordsHandlerDelegate {
     
-    @IBOutlet weak var wordsTableView: UITableView!
+    @IBOutlet private weak var wordsTableView: UITableView!
     
     private let model = WordsHandler()
     private var browser: MCNearbyServiceBrowser?
@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         wordsTableView.delegate = self
         wordsTableView.dataSource = self
+        model.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -24,6 +25,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.browser!.startBrowsingForPeers()
             }
         }
+    }
+    
+    // MARK: - WordsHandlerDelegate
+    
+    func dataRefreshed() {
+        wordsTableView.reloadData()
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        model.worSelectedAtRow(row: indexPath.row)
     }
     
     // MARK: - UITableViewDataSource

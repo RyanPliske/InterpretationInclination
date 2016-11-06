@@ -688,18 +688,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-HM-xmx" userLabel="Container View">
-                                <rect key="frame" x="-273" y="-185" width="1025" height="640"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1024" id="E9F-gy-Pe8"/>
-                                    <constraint firstAttribute="height" constant="640" id="WZS-b3-evb"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </customView>
                             <imageView horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ewc-Ac-kA8">
-                                <rect key="frame" x="-273" y="-185" width="492" height="640"/>
+                                <rect key="frame" x="0.0" y="0.0" width="230" height="270"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="f6T-Mx-90R"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="f3a-B3-ltX">
-                                <rect key="frame" x="260" y="-185" width="492" height="640"/>
+                                <rect key="frame" x="250" y="0.0" width="230" height="270"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="lTX-M9-wIJ"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DLX-n2-orn">
@@ -713,11 +709,11 @@
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="98B-2O-3JJ">
-                                <rect key="frame" x="144" y="79" width="193" height="36"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Random Word" drawsBackground="YES" id="kkv-Iy-Q7i">
+                                <rect key="frame" x="236" y="79" width="8" height="36"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="kkv-Iy-Q7i">
                                     <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
@@ -727,10 +723,12 @@
                             <constraint firstItem="ewc-Ac-kA8" firstAttribute="width" secondItem="Fhq-HM-xmx" secondAttribute="width" multiplier="0.48" id="2Ws-wm-PXb"/>
                             <constraint firstItem="DLX-n2-orn" firstAttribute="top" secondItem="98B-2O-3JJ" secondAttribute="bottom" constant="28" id="4PO-5F-t3A"/>
                             <constraint firstItem="98B-2O-3JJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="6Bb-WG-cfm"/>
+                            <constraint firstItem="Fhq-HM-xmx" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="6YI-OI-UbS"/>
                             <constraint firstItem="Fhq-HM-xmx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="DsZ-Yd-MlZ"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="trailing" secondItem="Fhq-HM-xmx" secondAttribute="trailing" id="IXN-Hf-H1M"/>
                             <constraint firstItem="ewc-Ac-kA8" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" id="JeS-Dc-UMt"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="width" secondItem="Fhq-HM-xmx" secondAttribute="width" multiplier="0.48" id="Rum-cQ-agF"/>
+                            <constraint firstItem="Fhq-HM-xmx" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" id="Xdy-Iw-Ni0"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="bottom" secondItem="Fhq-HM-xmx" secondAttribute="bottom" id="YEb-7m-ZxC"/>
                             <constraint firstItem="DLX-n2-orn" firstAttribute="centerX" secondItem="Fhq-HM-xmx" secondAttribute="centerX" id="ZbA-fB-s3V"/>
                             <constraint firstItem="DLX-n2-orn" firstAttribute="bottom" secondItem="m2S-Jp-Qdl" secondAttribute="bottom" constant="-30" id="cWE-Et-2AB"/>

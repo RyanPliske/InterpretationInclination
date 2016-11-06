@@ -15,7 +15,6 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     override func viewDidLoad() {
         super.viewDidLoad()
         resetImages()
-        resetWord()
         let peerId = MCPeerID(displayName: "II-Host")
         session = MCSession(peer: peerId, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         session!.delegate = self
@@ -26,7 +25,6 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
 
     @IBAction func nextButtonPressed(_ sender: Any) {
         resetImages()
-        resetWord()
         let _ = try? session.send(wordBank.randomWords(), toPeers: peerIds, with: .reliable)
     }
     
@@ -44,7 +42,9 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        
+        if let selectedWord = NSKeyedUnarchiver.unarchiveObject(with: data) as? String {
+            randomWordField.stringValue = selectedWord
+        }
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -61,10 +61,6 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     
     // MARK: - Private Helpers
     
-    private func resetWord() {
-        randomWordField.stringValue = wordBank.randomWord()
-    }
-    
     private func resetImages() {
         leftImageView.image = randomImage
         rightImageView.image = randomImage
@@ -72,7 +68,7 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     
     private var randomImage: NSImage {
         let min = 1
-        let max = 60
+        let max = 62
         let randomNumber = Int(arc4random_uniform(UInt32(max - min)) + UInt32(min))
         return NSImage(named: "\(randomNumber)")!
     }
