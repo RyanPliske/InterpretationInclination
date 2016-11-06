@@ -13,11 +13,17 @@
 		F93BD4BF1DCE68A800ABBF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93BD4BD1DCE68A800ABBF28 /* Main.storyboard */; };
 		F93BD5401DCE756E00ABBF28 /* WordBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD53F1DCE756E00ABBF28 /* WordBank.swift */; };
 		F93BD5481DCE799D00ABBF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */; };
-		F93BD54A1DCE799D00ABBF28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD5491DCE799D00ABBF28 /* ViewController.swift */; };
+		F93BD54A1DCE799D00ABBF28 /* DealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BD5491DCE799D00ABBF28 /* DealerViewController.swift */; };
 		F93BD54D1DCE799D00ABBF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93BD54B1DCE799D00ABBF28 /* Main.storyboard */; };
 		F93BD54F1DCE799D00ABBF28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */; };
 		F93BD5521DCE799D00ABBF28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93BD5501DCE799D00ABBF28 /* LaunchScreen.storyboard */; };
-		F9AB29481DCE829D0030DB3C /* WordsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB29471DCE829D0030DB3C /* WordsHandler.swift */; };
+		F94F4EE91DCEC33D004BF432 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4EE81DCEC33D004BF432 /* Player.swift */; };
+		F94F4EEA1DCEC3A9004BF432 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4EE81DCEC33D004BF432 /* Player.swift */; };
+		F96E9AFF1DCFA8A5000FC173 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E9AFE1DCFA8A5000FC173 /* PlayerViewController.swift */; };
+		F96E9B011DCFA90E000FC173 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E9B001DCFA90E000FC173 /* SelectionViewController.swift */; };
+		F96E9B031DCFB221000FC173 /* KeyboardListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E9B021DCFB221000FC173 /* KeyboardListeningView.swift */; };
+		F96E9B051DCFC04A000FC173 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E9B041DCFC04A000FC173 /* UIView+Extension.swift */; };
+		F9AB29481DCE829D0030DB3C /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB29471DCE829D0030DB3C /* ConnectionHandler.swift */; };
 		F9AB294A1DCE839A0030DB3C /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB29491DCE839A0030DB3C /* WordCell.swift */; };
 		F9AB29891DCEB2380030DB3C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9AB294B1DCEB2380030DB3C /* 1.png */; };
 		F9AB298A1DCEB2380030DB3C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9AB294C1DCEB2380030DB3C /* 2.png */; };
@@ -93,12 +99,17 @@
 		F93BD53F1DCE756E00ABBF28 /* WordBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordBank.swift; sourceTree = "<group>"; };
 		F93BD5451DCE799D00ABBF28 /* iDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F93BD5491DCE799D00ABBF28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F93BD5491DCE799D00ABBF28 /* DealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerViewController.swift; sourceTree = "<group>"; };
 		F93BD54C1DCE799D00ABBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F93BD5511DCE799D00ABBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F93BD5531DCE799D00ABBF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9AB29471DCE829D0030DB3C /* WordsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsHandler.swift; sourceTree = "<group>"; };
+		F94F4EE81DCEC33D004BF432 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F96E9AFE1DCFA8A5000FC173 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F96E9B001DCFA90E000FC173 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		F96E9B021DCFB221000FC173 /* KeyboardListeningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardListeningView.swift; sourceTree = "<group>"; };
+		F96E9B041DCFC04A000FC173 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F9AB29471DCE829D0030DB3C /* ConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		F9AB29491DCE839A0030DB3C /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 		F9AB294B1DCEB2380030DB3C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		F9AB294C1DCEB2380030DB3C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -210,6 +221,7 @@
 				F93BD4C01DCE68A800ABBF28 /* Info.plist */,
 				F93BD4C61DCE6AD300ABBF28 /* Art */,
 				F93BD53F1DCE756E00ABBF28 /* WordBank.swift */,
+				F94F4EE81DCEC33D004BF432 /* Player.swift */,
 			);
 			path = guessIt;
 			sourceTree = "<group>";
@@ -287,13 +299,17 @@
 			isa = PBXGroup;
 			children = (
 				F93BD5471DCE799D00ABBF28 /* AppDelegate.swift */,
-				F93BD5491DCE799D00ABBF28 /* ViewController.swift */,
-				F9AB29471DCE829D0030DB3C /* WordsHandler.swift */,
+				F96E9B001DCFA90E000FC173 /* SelectionViewController.swift */,
+				F93BD5491DCE799D00ABBF28 /* DealerViewController.swift */,
+				F96E9AFE1DCFA8A5000FC173 /* PlayerViewController.swift */,
+				F9AB29471DCE829D0030DB3C /* ConnectionHandler.swift */,
+				F96E9B021DCFB221000FC173 /* KeyboardListeningView.swift */,
 				F93BD54B1DCE799D00ABBF28 /* Main.storyboard */,
 				F93BD54E1DCE799D00ABBF28 /* Assets.xcassets */,
 				F93BD5501DCE799D00ABBF28 /* LaunchScreen.storyboard */,
 				F93BD5531DCE799D00ABBF28 /* Info.plist */,
 				F9AB29491DCE839A0030DB3C /* WordCell.swift */,
+				F96E9B041DCFC04A000FC173 /* UIView+Extension.swift */,
 			);
 			path = iDealer;
 			sourceTree = "<group>";
@@ -353,6 +369,7 @@
 					F93BD5441DCE799D00ABBF28 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = WBQ5Y4ZSH4;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -465,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94F4EE91DCEC33D004BF432 /* Player.swift in Sources */,
 				F93BD4BA1DCE68A700ABBF28 /* ViewController.swift in Sources */,
 				F93BD4B81DCE68A700ABBF28 /* AppDelegate.swift in Sources */,
 				F93BD5401DCE756E00ABBF28 /* WordBank.swift in Sources */,
@@ -475,10 +493,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9AB29481DCE829D0030DB3C /* WordsHandler.swift in Sources */,
+				F9AB29481DCE829D0030DB3C /* ConnectionHandler.swift in Sources */,
 				F9AB294A1DCE839A0030DB3C /* WordCell.swift in Sources */,
-				F93BD54A1DCE799D00ABBF28 /* ViewController.swift in Sources */,
+				F93BD54A1DCE799D00ABBF28 /* DealerViewController.swift in Sources */,
+				F96E9B051DCFC04A000FC173 /* UIView+Extension.swift in Sources */,
+				F94F4EEA1DCEC3A9004BF432 /* Player.swift in Sources */,
 				F93BD5481DCE799D00ABBF28 /* AppDelegate.swift in Sources */,
+				F96E9AFF1DCFA8A5000FC173 /* PlayerViewController.swift in Sources */,
+				F96E9B011DCFA90E000FC173 /* SelectionViewController.swift in Sources */,
+				F96E9B031DCFB221000FC173 /* KeyboardListeningView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

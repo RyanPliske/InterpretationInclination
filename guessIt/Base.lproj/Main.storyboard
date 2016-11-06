@@ -716,6 +716,30 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-n0-pJR">
+                                <rect key="frame" x="363" y="32" width="4" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="20q-K0-aLH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-On-hYX">
+                                <rect key="frame" x="113" y="32" width="4" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="1Ij-01-B79">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="baV-av-bBF">
+                                <rect key="frame" x="158" y="200" width="164" height="60"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Players" id="sDK-B3-q5s">
+                                    <font key="font" metaFont="system" size="50"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Fhq-HM-xmx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="0aK-Rx-8eg"/>
@@ -724,22 +748,31 @@
                             <constraint firstItem="DLX-n2-orn" firstAttribute="top" secondItem="98B-2O-3JJ" secondAttribute="bottom" constant="28" id="4PO-5F-t3A"/>
                             <constraint firstItem="98B-2O-3JJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="6Bb-WG-cfm"/>
                             <constraint firstItem="Fhq-HM-xmx" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="6YI-OI-UbS"/>
+                            <constraint firstItem="baV-av-bBF" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" constant="10" id="BIq-4p-Jil"/>
                             <constraint firstItem="Fhq-HM-xmx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="DsZ-Yd-MlZ"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="trailing" secondItem="Fhq-HM-xmx" secondAttribute="trailing" id="IXN-Hf-H1M"/>
                             <constraint firstItem="ewc-Ac-kA8" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" id="JeS-Dc-UMt"/>
+                            <constraint firstItem="PsV-n0-pJR" firstAttribute="centerX" secondItem="f3a-B3-ltX" secondAttribute="centerX" id="Ktf-0V-jY5"/>
+                            <constraint firstItem="PsV-n0-pJR" firstAttribute="centerY" secondItem="DLX-n2-orn" secondAttribute="centerY" id="Roa-2S-ciW"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="width" secondItem="Fhq-HM-xmx" secondAttribute="width" multiplier="0.48" id="Rum-cQ-agF"/>
                             <constraint firstItem="Fhq-HM-xmx" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" id="Xdy-Iw-Ni0"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="bottom" secondItem="Fhq-HM-xmx" secondAttribute="bottom" id="YEb-7m-ZxC"/>
                             <constraint firstItem="DLX-n2-orn" firstAttribute="centerX" secondItem="Fhq-HM-xmx" secondAttribute="centerX" id="ZbA-fB-s3V"/>
                             <constraint firstItem="DLX-n2-orn" firstAttribute="bottom" secondItem="m2S-Jp-Qdl" secondAttribute="bottom" constant="-30" id="cWE-Et-2AB"/>
                             <constraint firstItem="ewc-Ac-kA8" firstAttribute="leading" secondItem="Fhq-HM-xmx" secondAttribute="leading" id="grn-eQ-x6M"/>
+                            <constraint firstItem="ybD-On-hYX" firstAttribute="centerX" secondItem="ewc-Ac-kA8" secondAttribute="centerX" id="hY7-6d-MhM"/>
                             <constraint firstItem="f3a-B3-ltX" firstAttribute="top" secondItem="Fhq-HM-xmx" secondAttribute="top" id="p6g-TK-Suo"/>
+                            <constraint firstItem="ybD-On-hYX" firstAttribute="centerY" secondItem="DLX-n2-orn" secondAttribute="centerY" id="wKq-bM-mVx"/>
+                            <constraint firstItem="baV-av-bBF" firstAttribute="centerX" secondItem="Fhq-HM-xmx" secondAttribute="centerX" id="yPI-X8-Lff"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="leftImageView" destination="ewc-Ac-kA8" id="fmK-QE-qnd"/>
+                        <outlet property="leftTextField" destination="PsV-n0-pJR" id="OeE-Cb-d5s"/>
+                        <outlet property="playersTextField" destination="baV-av-bBF" id="Bga-BB-e1c"/>
                         <outlet property="randomWordField" destination="98B-2O-3JJ" id="gdi-K6-eEy"/>
                         <outlet property="rightImageView" destination="f3a-B3-ltX" id="bva-xk-269"/>
+                        <outlet property="rightTextField" destination="ybD-On-hYX" id="U4z-DV-bcP"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
