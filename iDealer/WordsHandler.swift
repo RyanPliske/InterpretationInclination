@@ -20,7 +20,7 @@ class WordsHandler: NSObject, MCSessionDelegate {
         session.delegate = self
     }
     
-    func worSelectedAtRow(row: Int) {
+    func wordSelectedAtRow(row: Int) {
         if let hostPeerId = hostPeerId {
             let wordToSend = NSKeyedArchiver.archivedData(withRootObject: words[row])
             let _ = try? session.send(wordToSend, toPeers: [hostPeerId], with: .reliable)
@@ -36,7 +36,10 @@ class WordsHandler: NSObject, MCSessionDelegate {
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         if let words = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String] {
             self.words = words
-            self.delegate?.dataRefreshed()
+            self.hostPeerId = peerID
+            DispatchQueue.main.async {
+                self.delegate?.dataRefreshed()
+            }
         }
     }
     

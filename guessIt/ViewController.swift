@@ -33,6 +33,9 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         peerIds.append(peerID)
         invitationHandler(true, session)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let _ = try? self.session.send(self.wordBank.randomWords(), toPeers: self.peerIds, with: .reliable)
+        }
     }
     
     // MARK: - MCSessionDelegate
@@ -43,7 +46,9 @@ class ViewController: NSViewController, MCNearbyServiceAdvertiserDelegate, MCSes
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         if let selectedWord = NSKeyedUnarchiver.unarchiveObject(with: data) as? String {
-            randomWordField.stringValue = selectedWord
+            DispatchQueue.main.async {
+                self.randomWordField.stringValue = selectedWord
+            }
         }
     }
     

@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        model.worSelectedAtRow(row: indexPath.row)
+        model.wordSelectedAtRow(row: indexPath.row)
     }
     
     // MARK: - UITableViewDataSource
